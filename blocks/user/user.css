@@ -1,0 +1,96 @@
+.user {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.user-display {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--text-color, #333);
+}
+
+.user-edit-btn,
+.user-btn-primary {
+  background: var(--link-color, #0066cc);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1.25rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.user-edit-btn:hover,
+.user-btn-primary:hover {
+  background: var(--link-hover-color, #0052a3);
+}
+
+.user-btn-cancel {
+  background: transparent;
+  border: 1px solid #999;
+  border-radius: 4px;
+  padding: 0.5rem 1.25rem;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #333;
+}
+
+.user-btn-cancel:hover {
+  background: #f0f0f0;
+}
+
+.user-dialog {
+  border: none;
+  border-radius: 8px;
+  padding: 0;
+  box-shadow: 0 8px 32px rgb(0 0 0 / 20%);
+  min-width: 320px;
+}
+
+.user-dialog::backdrop {
+  background: rgb(0 0 0 / 40%);
+}
+
+.user-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 2rem;
+}
+
+.user-form h2 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.user-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #444;
+}
+
+.user-form input[type='text'] {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.user-form input[type='text']:focus {
+  outline: 2px solid var(--link-color, #0066cc);
+  outline-offset: 1px;
+  border-color: transparent;
+}
+
+.user-form-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-end;
+}
