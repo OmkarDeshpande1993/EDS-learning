@@ -20,7 +20,7 @@ export default function decorate(block) {
   dialog.className = 'user-dialog';
   dialog.innerHTML = `
     <form method="dialog" class="user-form">
-      <h2>Enter your name</h2>
+      <h2>Enter User Information</h2>
       <label>
         First name
         <input type="text" name="firstName" autocomplete="given-name" required />
@@ -28,6 +28,15 @@ export default function decorate(block) {
       <label>
         Last name
         <input type="text" name="lastName" autocomplete="family-name" required />
+      </label>
+      <label>
+        Gender
+        <select type="text" name="gender" required>
+          <option value="">Select Gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
       </label>
       <div class="user-form-actions">
         <button type="submit" class="user-btn-primary">Save</button>
@@ -39,10 +48,11 @@ export default function decorate(block) {
   const form = dialog.querySelector('form');
   const firstInput = form.querySelector('[name="firstName"]');
   const lastInput = form.querySelector('[name="lastName"]');
-
+  const genderInput = form.querySelector('[name="gender"]');
   // Pre-fill from authored content
   firstInput.value = defaultFirst;
   lastInput.value = defaultLast;
+  genderInput.value = '';
 
   editBtn.addEventListener('click', () => {
     dialog.showModal();
@@ -56,6 +66,7 @@ export default function decorate(block) {
   form.addEventListener('submit', () => {
     const first = firstInput.value.trim();
     const last = lastInput.value.trim();
+    const gender = genderInput.value.trim()
     display.textContent = `Hello, ${first} ${last}!`;
     editBtn.textContent = 'Edit Name';
   });
