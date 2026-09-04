@@ -83,6 +83,15 @@
   box-sizing: border-box;
 }
 
+.user-form input[type='select'] {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
 .user-form input[type='text']:focus {
   outline: 2px solid var(--link-color, #0066cc);
   outline-offset: 1px;
