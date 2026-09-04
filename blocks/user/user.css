@@ -83,7 +83,7 @@
   box-sizing: border-box;
 }
 
-.user-form input[type='select'] {
+.user-form select {
   padding: 0.5rem 0.75rem;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -98,7 +98,7 @@
   border-color: transparent;
 }
 
-.user-form input[type='select']:focus {
+.user-form select:focus {
   outline: 2px solid var(--link-color, #0066cc);
   outline-offset: 1px;
   border-color: transparent;
